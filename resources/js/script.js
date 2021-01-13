@@ -1,3 +1,4 @@
+//variable declration for experience and educations
 var experiences=[
   {post:"Junior Developer",details:"Working as a junior developer at St.Xaviers' college on the project Student Management System from September 2019."},
   {post:"Intern",details:"Worked as a QA intern at OLE Nepal from June 2017 to Sept 2017" },
@@ -8,8 +9,10 @@ var educations=[
   {courseName:"+2 Science", institute:"White House Higher Secondary School and College", time:"2015 to 2017"},
   {courseName:"SLC", institute:"Ekta Academy",time:"Completed 2015"}
 ];
+
+//main jquery section
 $(document).ready(function(){
-  // use of loop to load the DOM contents
+  // use of loop to load the DOM contents of experiences
     $.each(experiences, function(number,experience){
       var post = experience.post;
       var details= experience.details;
@@ -18,6 +21,8 @@ $(document).ready(function(){
       $(".experiences").append("<div class='experience'>"+h+"</div>")
 
     })
+
+    // use of loop to load the DOM contents of education
     $.each(educations, function(number,education){
       var courseName = education.courseName;
       var institute = education.institute;
@@ -28,7 +33,8 @@ $(document).ready(function(){
       var h = "<p class='courseName'>"+courseName+"</p>"+"<p class='institute'>"+institute+"</p>"+"<p class='time'>"+time+"</p>"
       $(".educations").append("<div class='education'>"+h+"</div>")
     })
-    //use of jquery DOM Manipulation
+
+    //use of jquery DOM Manipulation for contact details toggle
     $(".pdButton").click(function(){
       $(".pd").slideToggle(400,function(){
 
@@ -42,6 +48,8 @@ $(document).ready(function(){
         }
       });
     })
+
+    //use of jquery DOM Manipulation for experiences details toggle
     $(".expButton").click(function(){
       $(this).parent().siblings().slideToggle(400,function(){
         var button = $(this).siblings().children()
