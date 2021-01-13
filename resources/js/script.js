@@ -1,9 +1,13 @@
-experiences=[
-  {post:"Junior Developer",details:"I have worked as a junior developer at St.Xaviers' college on the project Student Management System from September 2019 to till date."},
-  {post:"Intern",details:"I have worked as an intern at OLE Nepal from June 2017 to Sept 2017 where I got the oppertunity to learn a work of an QA and several other networking things that were implemented by the organization" },
-  {post:"President", details:"I have been contributing to Ekta Alumni Association as a President from the date October 2018 to till date"},
-]
-
+var experiences=[
+  {post:"Junior Developer",details:"Working as a junior developer at St.Xaviers' college on the project Student Management System from September 2019."},
+  {post:"Intern",details:"Worked as a QA intern at OLE Nepal from June 2017 to Sept 2017" },
+  {post:"President", details:"Have been contributing to Ekta Alumni Association as a President from October 2018."},
+];
+var educations=[
+  {courseName:"CSIT", institute:"St. Xavier's College", time:"2017 to Running"},
+  {courseName:"+2 Science", institute:"White House Higher Secondary School and College", time:"2015 to 2017"},
+  {courseName:"SLC", institute:"Ekta Academy",time:"Completed 2015"}
+];
 $(document).ready(function(){
   // use of loop to load the DOM contents
     $.each(experiences, function(number,experience){
@@ -13,6 +17,16 @@ $(document).ready(function(){
       console.log(h)
       $(".experiences").append("<div class='experience'>"+h+"</div>")
 
+    })
+    $.each(educations, function(number,education){
+      var courseName = education.courseName;
+      var institute = education.institute;
+      var time = education.time;
+      console.log(courseName);
+      console.log(institute);
+      console.log(time);
+      var h = "<p class='courseName'>"+courseName+"</p>"+"<p class='institute'>"+institute+"</p>"+"<p class='time'>"+time+"</p>"
+      $(".educations").append("<div class='education'>"+h+"</div>")
     })
     //use of jquery DOM Manipulation
     $(".pdButton").click(function(){

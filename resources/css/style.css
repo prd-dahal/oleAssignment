@@ -47,6 +47,23 @@ html{
   animation:move 3s;
 
 }
+.primary_button:hover{
+    transform: scale(1.1);
+  }
+.education{
+  margin-top:30px;
+}
+.courseName{
+  font-weight:bold;
+  font-size:18px;
+  color:#679876;
+}
+.time{
+  font-style:italic;
+  font-size:14px;
+}
+
+
 body{
   background-color:black;
   color:rgb(209,200,188);
